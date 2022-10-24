@@ -1,0 +1,103 @@
+/* COMMON STYLES STARTS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-bg: #232B33;
+    --primary-color: #f15025;
+    --secondary-color: #ffffff;
+}
+@font-face {
+    font-family: verdana;
+    src: url(../fonts/verdana.ttf);
+}
+body {
+    background-color: var(--primary-bg);
+    font-family: verdana;
+}
+/* COMMON STYLES ENDS */
+
+h1{
+    margin: 120px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--primary-color);
+}
+/* ALIGNMENT OF IMAGE CONTAINER */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* CENTERING ARROW ICONS IN ARROW CONTAINER */
+.container .arrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.container .arrow:hover {
+    background-color: var(--primary-color);
+}
+
+/* LEFT AND RIGHT ARROW */
+.container .arrow div {
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+    border-left: 3px solid var(--primary-color);
+    border-top: 3px solid var(--primary-color);
+}
+.container .arrow:hover div {
+    border-left: 3px solid var(--secondary-color);
+    border-top: 3px solid var(--secondary-color);
+}
+
+/* ROTATING DIV TO LOOK AS LEFT AND RIGHT */
+.container .leftArrow .leftArrowDiv {
+    transform: rotate(-40deg) translate(2px, 2px);
+}
+.container .rightArrow .rightArrowDiv {
+    transform: rotate(130deg) translate(2px, 2px);
+}
+
+/* VIEW AREA */
+.container .testimonialContainer {
+    width: 700px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: verdana;
+}
+.container .testimonialContainer > * {
+    margin-bottom: 5%;
+    transition: 0.7ms ease;
+}
+.container .testimonialContainer > div {
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 25px;
+}
+.container .testimonialContainer img {
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -7%;
+    border: 1px solid var(--secondary-color);
+}
+.container .testimonialContainer #title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
